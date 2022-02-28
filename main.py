@@ -23,10 +23,7 @@ def decorator(path):
     return _decorator
 
 
-decorator_path = decorator('.')
-
-
-@decorator_path
+@decorator('.')
 def get_my_ip(url):
     response = requests.get(url)
     response.raise_for_status()
